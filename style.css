@@ -650,7 +650,7 @@ h2,
 .eyebrow,
 .f-block h4,
 .ftr h4,
-.checkout legend,
+.checkout legend { font: var(--t-label); letter-spacing: var(--ls-label, normal); text-transform: var(--tt-label, none); }
 /* chip: Плашки на товарах (Новинка, Своё производство) */
 .chip { font: var(--t-chip); }
 /* lead: Вводный абзац */
