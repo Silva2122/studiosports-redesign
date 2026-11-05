@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Типографика — StudioSports</title>
+<meta name="description" content="StudioSports — интернет-ателье одежды для фигурного катания и гимнастики">
+<link rel="icon" href="img/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Unbounded:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="js/app.js" defer></script>
+</head>
+<body>
+<div class="topbar">
+  <div class="wrap topbar-in">
+    <span>Отправим заказ на следующий рабочий день · по всей России</span>
+    <span class="topbar-r">Пн–Пт 09:00–19:00
+      <a href="tel:+79200624469">+7 920 062-44-69</a>
+      <a href="tel:+79202538907" class="opt">Организациям: +7 920 253-89-07</a></span>
+  </div>
+</div>
+<header class="hdr">
+  <div class="wrap hdr-in">
+    <button class="ibtn burger" data-open="drawer" aria-label="Меню"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    <a href="index.html" class="logo"><img src="img/logo.png" width="138" height="61" alt="Studio Sports"></a>
+    <nav class="nav">
+      <button class="nav-cat" data-open="mega">Каталог <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+      <a href="catalog.html?s=figure-skating">Фигурное катание</a><a href="catalog.html?s=rhythmic-gymnastics">Гимнастика</a><a href="catalog.html?s=accessories">Аксессуары</a><a href="catalog.html?s=podarochnye-nabory">Подарки</a><a href="delivery.html">Доставка</a><a href="about.html">О нас</a>
+    </nav>
+    <div class="hdr-ic">
+      <button class="ibtn" data-open="search" aria-label="Поиск"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 19a8 8 0 1 0 0-16 8 8 0 0 0 0 16Zm10 2-4.35-4.35"/></svg></button>
+      <a class="ibtn hide-sm" href="favorites.html" aria-label="Избранное"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-7-4.35-7-10a4 4 0 0 1 7-2.65A4 4 0 0 1 19 10c0 5.65-7 10-7 10Z"/></svg><i class="cnt" data-count="fav"></i></a>
+      <a class="ibtn" href="cart.html" aria-label="Корзина"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8h12l-1 12H7L6 8Zm3 0V6a3 3 0 0 1 6 0v2"/></svg><i class="cnt" data-count="cart"></i></a>
+    </div>
+  </div>
+  <div class="mega" id="mega"><div class="wrap mega-in" data-mega></div></div>
+</header>
+
+<div class="overlay" id="search" role="dialog" aria-label="Поиск">
+  <div class="search-box wrap">
+    <form action="catalog.html" class="search-f"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 19a8 8 0 1 0 0-16 8 8 0 0 0 0 16Zm10 2-4.35-4.35"/></svg>
+      <input name="q" placeholder="Например, термо платье или сушки" autocomplete="off" data-search>
+      <button type="button" class="ibtn" data-close aria-label="Закрыть"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+    </form>
+    <div class="search-res" data-search-res></div>
+  </div>
+</div>
+
+<aside class="drawer" id="drawer" aria-label="Меню">
+  <div class="drawer-h"><img src="img/logo.png" width="110" alt="Studio Sports">
+    <button class="ibtn" data-close aria-label="Закрыть"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button></div>
+  <div class="drawer-b">
+    <div data-drawer-tree></div>
+    <div class="drawer-links">
+      <a href="favorites.html">Избранное</a><a href="delivery.html">Доставка и оплата</a>
+      <a href="discounts.html">Система скидок</a><a href="sizes.html">Таблица размеров</a>
+      <a href="about.html">О нас</a><a href="contacts.html">Контакты</a>
+    </div>
+    <a class="drawer-tel" href="tel:+79200624469">+7 920 062-44-69</a>
+  </div>
+</aside>
+<div class="scrim" data-close></div>
+
+<main>
+<div class="wrap page-top"><nav class="crumbs"><a href="index.html">Главная</a><span>Типографика</span></nav><h1>Типографика</h1>
+<p class="lead" style="margin-top:12px;max-width:720px">Два семейства: <b>Unbounded</b> — только заголовки и цифры-акценты, <b>Open Sans</b> — всё остальное, включая цены. Каждый текст на сайте берёт одну из этих ролей. Увеличенный межбуквенный интервал не используется нигде; размеры меняются в одном месте — в :root файла style.css.</p>
+<div class="tg"><div class="tg-row"><div class="tg-meta"><code>--t-display</code><span>Unbounded 500 · 32–58px</span><span>Заголовок первого экрана</span></div>
+  <div class="tg-sample" style="font: var(--t-display); letter-spacing: var(--ls-display, normal); text-transform: var(--tt-display, none)">Для девочек</div></div><div class="tg-row"><div class="tg-meta"><code>--t-h1</code><span>Unbounded 500 · 28–40px</span><span>Заголовок страницы</span></div>
+  <div class="tg-sample" style="font: var(--t-h1); letter-spacing: var(--ls-h1, normal); text-transform: var(--tt-h1, none)">Термо платья</div></div><div class="tg-row"><div class="tg-meta"><code>--t-h2</code><span>Unbounded 500 · 22–32px</span><span>Заголовок секции, название товара</span></div>
+  <div class="tg-sample" style="font: var(--t-h2); letter-spacing: var(--ls-h2, normal); text-transform: var(--tt-h2, none)">Новинки сезона</div></div><div class="tg-row"><div class="tg-meta"><code>--t-stat</code><span>Unbounded 500 · 22–30px</span><span>Крупные цифры-акценты</span></div>
+  <div class="tg-sample" style="font: var(--t-stat); letter-spacing: var(--ls-stat, normal); text-transform: var(--tt-stat, none)">15% · 104–170</div></div><div class="tg-row"><div class="tg-meta"><code>--t-h3</code><span>Open Sans 700 · 20 / моб. 18px</span><span>Подзаголовок блока, модалки</span></div>
+  <div class="tg-sample" style="font: var(--t-h3); letter-spacing: var(--ls-h3, normal); text-transform: var(--tt-h3, none)">Ваш заказ</div></div><div class="tg-row"><div class="tg-meta"><code>--t-h4</code><span>Open Sans 700 · 16 / моб. 15px</span><span>Заголовок карточки, пункта</span></div>
+  <div class="tg-sample" style="font: var(--t-h4); letter-spacing: var(--ls-h4, normal); text-transform: var(--tt-h4, none)">Отправка на следующий день</div></div><div class="tg-row"><div class="tg-meta"><code>--t-label</code><span>Open Sans 700 · 12px · капс</span><span>Надзаголовок, подпись группы</span></div>
+  <div class="tg-sample" style="font: var(--t-label); letter-spacing: var(--ls-label, normal); text-transform: var(--tt-label, none)">Коллекция 2025–2026</div></div><div class="tg-row"><div class="tg-meta"><code>--t-chip</code><span>Open Sans 600 · 11px</span><span>Плашки на товарах</span></div>
+  <div class="tg-sample" style="font: var(--t-chip); letter-spacing: var(--ls-chip, normal); text-transform: var(--tt-chip, none)">Новинка</div></div><div class="tg-row"><div class="tg-meta"><code>--t-lead</code><span>Open Sans 400 · 18 / моб. 16px</span><span>Вводный абзац</span></div>
+  <div class="tg-sample" style="font: var(--t-lead); letter-spacing: var(--ls-lead, normal); text-transform: var(--tt-lead, none)">Доставляем заказы по всей России.</div></div><div class="tg-row"><div class="tg-meta"><code>--t-body</code><span>Open Sans 400 · 15px</span><span>Основной текст, описание товара</span></div>
+  <div class="tg-sample" style="font: var(--t-body); letter-spacing: var(--ls-body, normal); text-transform: var(--tt-body, none)">Термо платье выполнено из итальянской термо ткани.</div></div><div class="tg-row"><div class="tg-meta"><code>--t-body-s</code><span>Open Sans 400 · 14px</span><span>Вторичный текст, меню, списки</span></div>
+  <div class="tg-sample" style="font: var(--t-body-s); letter-spacing: var(--ls-body-s, normal); text-transform: var(--tt-body-s, none)">Термо комбинезоны для девочек</div></div><div class="tg-row"><div class="tg-meta"><code>--t-ui</code><span>Open Sans 600 · 14px</span><span>Навигация, кнопки, ссылки, чипы</span></div>
+  <div class="tg-sample" style="font: var(--t-ui); letter-spacing: var(--ls-ui, normal); text-transform: var(--tt-ui, none)">В корзину · Фильтры · Доставка</div></div><div class="tg-row"><div class="tg-meta"><code>--t-name</code><span>Open Sans 600 · 15 / моб. 14px</span><span>Название товара в сетке</span></div>
+  <div class="tg-sample" style="font: var(--t-name); letter-spacing: var(--ls-name, normal); text-transform: var(--tt-name, none)">Термо кофта &quot;Астрид&quot;</div></div><div class="tg-row"><div class="tg-meta"><code>--t-num-l</code><span>Open Sans 700 · 30 / моб. 26px</span><span>Цена в карточке, итог корзины</span></div>
+  <div class="tg-sample" style="font: var(--t-num-l); letter-spacing: var(--ls-num-l, normal); text-transform: var(--tt-num-l, none)">6 310 ₽</div></div><div class="tg-row"><div class="tg-meta"><code>--t-num</code><span>Open Sans 700 · 17 / моб. 16px</span><span>Цена в сетке, телефоны</span></div>
+  <div class="tg-sample" style="font: var(--t-num); letter-spacing: var(--ls-num, normal); text-transform: var(--tt-num, none)">от 4 770 ₽</div></div><div class="tg-row"><div class="tg-meta"><code>--t-small</code><span>Open Sans 400 · 13px</span><span>Мета: рост, подсказки, крошки</span></div>
+  <div class="tg-sample" style="font: var(--t-small); letter-spacing: var(--ls-small, normal); text-transform: var(--tt-small, none)">Рост 104–170</div></div><div class="tg-row"><div class="tg-meta"><code>--t-caption</code><span>Open Sans 400 · 12px</span><span>Сноски, счётчики</span></div>
+  <div class="tg-sample" style="font: var(--t-caption); letter-spacing: var(--ls-caption, normal); text-transform: var(--tt-caption, none)">Заказы обрабатываем Пн–Пт</div></div></div></div>
+</main>
+
+<footer class="ftr">
+  <div class="wrap ftr-in">
+    <div class="ftr-brand">
+      <img src="img/footer-logo.png" width="101" height="44" alt="Studio Sports">
+      <p>Одежда для фигуристов и гимнастов от производителя.</p>
+      <a class="vk" href="http://vk.com/studiosports">ВКонтакте</a>
+    </div>
+    <div><h4>Каталог</h4>
+      <a href="catalog.html?s=figure-skating">Фигурное катание</a>
+      <a href="catalog.html?s=rhythmic-gymnastics">Гимнастика</a>
+      <a href="catalog.html?s=ballroom-dancing">Бальные танцы</a>
+      <a href="catalog.html?s=accessories">Аксессуары</a>
+      <a href="catalog.html?s=rhinestones">Стразы</a></div>
+    <div><h4>Покупателям</h4>
+      <a href="howto.html">Как купить</a>
+      <a href="delivery.html">Доставка и оплата</a>
+      <a href="discounts.html">Система скидок</a>
+      <a href="sizes.html">Таблица размеров</a>
+      <a href="rules.html">Правила продажи</a></div>
+    <div><h4>Контакты</h4>
+      <a class="big" href="tel:+79200624469">+7 920 062-44-69</a><small>частным покупателям</small>
+      <a class="big" href="tel:+79202538907">+7 920 253-89-07</a><small>организациям</small>
+      <a href="mailto:ss@studiosports.ru">ss@studiosports.ru</a>
+      <small>Пн–Пт 09:00–19:00, Сб–Вс выходные</small></div>
+  </div>
+  <div class="wrap ftr-b"><span>© StudioSports · ООО «Стиль-НН»</span>
+    <a href="about.html">О магазине</a><a href="contacts.html">Контакты</a>
+    <a href="requisites.html">Реквизиты</a><a href="privacy.html">Политика обработки ПД</a></div>
+</footer>
+<div class="toast" id="toast" role="status"></div>
+</body>
+</html>

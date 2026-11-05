@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Корзина — StudioSports</title>
+<meta name="description" content="StudioSports — интернет-ателье одежды для фигурного катания и гимнастики">
+<link rel="icon" href="img/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Unbounded:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="js/app.js" defer></script><script src="js/cart.js" defer></script>
+</head>
+<body>
+<div class="topbar">
+  <div class="wrap topbar-in">
+    <span>Отправим заказ на следующий рабочий день · по всей России</span>
+    <span class="topbar-r">Пн–Пт 09:00–19:00
+      <a href="tel:+79200624469">+7 920 062-44-69</a>
+      <a href="tel:+79202538907" class="opt">Организациям: +7 920 253-89-07</a></span>
+  </div>
+</div>
+<header class="hdr">
+  <div class="wrap hdr-in">
+    <button class="ibtn burger" data-open="drawer" aria-label="Меню"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    <a href="index.html" class="logo"><img src="img/logo.png" width="138" height="61" alt="Studio Sports"></a>
+    <nav class="nav">
+      <button class="nav-cat" data-open="mega">Каталог <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+      <a href="catalog.html?s=figure-skating">Фигурное катание</a><a href="catalog.html?s=rhythmic-gymnastics">Гимнастика</a><a href="catalog.html?s=accessories">Аксессуары</a><a href="catalog.html?s=podarochnye-nabory">Подарки</a><a href="delivery.html">Доставка</a><a href="about.html">О нас</a>
+    </nav>
+    <div class="hdr-ic">
+      <button class="ibtn" data-open="search" aria-label="Поиск"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 19a8 8 0 1 0 0-16 8 8 0 0 0 0 16Zm10 2-4.35-4.35"/></svg></button>
+      <a class="ibtn hide-sm" href="favorites.html" aria-label="Избранное"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-7-4.35-7-10a4 4 0 0 1 7-2.65A4 4 0 0 1 19 10c0 5.65-7 10-7 10Z"/></svg><i class="cnt" data-count="fav"></i></a>
+      <a class="ibtn" href="cart.html" aria-label="Корзина"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8h12l-1 12H7L6 8Zm3 0V6a3 3 0 0 1 6 0v2"/></svg><i class="cnt" data-count="cart"></i></a>
+    </div>
+  </div>
+  <div class="mega" id="mega"><div class="wrap mega-in" data-mega></div></div>
+</header>
+
+<div class="overlay" id="search" role="dialog" aria-label="Поиск">
+  <div class="search-box wrap">
+    <form action="catalog.html" class="search-f"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 19a8 8 0 1 0 0-16 8 8 0 0 0 0 16Zm10 2-4.35-4.35"/></svg>
+      <input name="q" placeholder="Например, термо платье или сушки" autocomplete="off" data-search>
+      <button type="button" class="ibtn" data-close aria-label="Закрыть"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+    </form>
+    <div class="search-res" data-search-res></div>
+  </div>
+</div>
+
+<aside class="drawer" id="drawer" aria-label="Меню">
+  <div class="drawer-h"><img src="img/logo.png" width="110" alt="Studio Sports">
+    <button class="ibtn" data-close aria-label="Закрыть"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button></div>
+  <div class="drawer-b">
+    <div data-drawer-tree></div>
+    <div class="drawer-links">
+      <a href="favorites.html">Избранное</a><a href="delivery.html">Доставка и оплата</a>
+      <a href="discounts.html">Система скидок</a><a href="sizes.html">Таблица размеров</a>
+      <a href="about.html">О нас</a><a href="contacts.html">Контакты</a>
+    </div>
+    <a class="drawer-tel" href="tel:+79200624469">+7 920 062-44-69</a>
+  </div>
+</aside>
+<div class="scrim" data-close></div>
+
+<main>
+
+<div class="wrap page-top"><nav class="crumbs"><a href="index.html">Главная</a><span>Корзина</span></nav>
+  <div class="cat-head"><h1>Корзина</h1><span class="cat-total" data-cart-total></span></div></div>
+<div class="wrap cart" data-cart>
+  <div class="cart-main">
+    <div class="cart-list" data-list></div>
+    <form class="checkout" data-checkout hidden novalidate>
+      <h2>Оформление заказа</h2>
+      <fieldset><legend>Покупатель</legend>
+        <div class="seg"><label><input type="radio" name="who" value="person" checked><span>Частное лицо</span></label>
+          <label><input type="radio" name="who" value="org"><span>Организация, спортшкола</span></label></div>
+        <div class="fgrid">
+          <label class="fld"><span>Имя и фамилия получателя</span><input name="name" required autocomplete="name"></label>
+          <label class="fld"><span>Телефон</span><input name="phone" required type="tel" autocomplete="tel" placeholder="+7"></label>
+          <label class="fld"><span>E-mail — пришлём копию заказа</span><input name="email" required type="email" autocomplete="email"></label>
+          <label class="fld" data-org hidden><span>Название организации, ИНН</span><input name="org"></label>
+        </div></fieldset>
+      <fieldset><legend>Доставка</legend>
+        <div class="radios">
+          <label class="rad"><input type="radio" name="ship" value="tk" checked><span><b>Курьерская служба или ТК</b><small>СДЭК, транспортные компании. Стоимость рассчитает менеджер</small></span></label>
+          <label class="rad"><input type="radio" name="ship" value="post"><span><b>Почта России</b><small>По 100% предоплате, 5–14 рабочих дней</small></span></label>
+          <label class="rad"><input type="radio" name="ship" value="pickup"><span><b>Самовывоз, Нижний Новгород</b><small>Мещерский бульвар, 5а, ориентир — магазин «Аксель». По 100% предоплате</small></span></label>
+        </div>
+        <div class="fgrid" data-addr>
+          <label class="fld"><span>Город</span><input name="city" autocomplete="address-level2"></label>
+          <label class="fld"><span>Адрес или пункт выдачи</span><input name="addr" autocomplete="street-address"></label>
+        </div></fieldset>
+      <fieldset><legend>Оплата</legend>
+        <div class="radios">
+          <label class="rad"><input type="radio" name="pay" value="card" checked><span><b>Банковской картой</b><small>После подтверждения пришлём ссылку на оплату от Сбербанка. МИР, Visa, Mastercard</small></span></label>
+          <label class="rad"><input type="radio" name="pay" value="bank"><span><b>По реквизитам</b><small>Счёт для оплаты в банке, зачисление 1–3 дня</small></span></label>
+        </div></fieldset>
+      <label class="fld"><span>Комментарий к заказу</span><textarea name="comment" rows="3" placeholder="Например, нужен пошив другого цвета"></textarea></label>
+      <label class="chk"><input type="checkbox" name="agree" required><span></span>Согласен с <a class="link" href="privacy.html">обработкой персональных данных</a> и <a class="link" href="rules.html">правилами продажи</a></label>
+      <p class="form-err" data-err></p>
+    </form>
+  </div>
+  <aside class="summary" data-summary hidden>
+    <h3>Ваш заказ</h3>
+    <dl>
+      <div><dt>Товары, <span data-s-count></span></dt><dd data-s-sum></dd></div>
+      <div class="s-disc"><dt>Скидка <span data-s-pct></span></dt><dd data-s-disc></dd></div>
+      <div><dt>Доставка</dt><dd class="muted">рассчитает менеджер</dd></div>
+    </dl>
+    <div class="s-total"><span>Итого</span><b data-s-total></b></div>
+    <div class="s-progress" data-s-progress></div>
+    <button class="btn btn--dark wide" data-go>Перейти к оформлению</button>
+    <button class="btn btn--dark wide" data-submit hidden>Подтвердить заказ</button>
+    <p class="s-note">Заказы принимаем круглосуточно, обрабатываем Пн–Пт. Менеджер свяжется для подтверждения. Неподтверждённые за 3 дня заказы отменяются.</p>
+  </aside>
+  <div class="cart-empty" data-cempty hidden>
+    <div class="ce-ic"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8h12l-1 12H7L6 8Zm3 0V6a3 3 0 0 1 6 0v2"/></svg></div><h2>В корзине пока пусто</h2>
+    <p>Загляните в новинки или в каталог — там больше 1500 моделей.</p>
+    <div class="ce-btns"><a class="btn btn--dark" href="catalog.html?new=1">Новинки</a><a class="btn btn--line" href="catalog.html">Каталог</a></div>
+  </div>
+  <div class="done" data-done hidden>
+    <div class="ce-ic ok"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg></div><h2>Заказ <span data-order-no></span> принят</h2>
+    <p>Спасибо! Менеджер свяжется с вами в рабочее время, чтобы подтвердить наличие, стоимость доставки и прислать ссылку на оплату.</p>
+    <p class="muted">Это демо-прототип: заказ никуда не отправлен.</p>
+    <a class="btn btn--dark" href="index.html">На главную</a>
+  </div>
+</div>
+</main>
+
+<footer class="ftr">
+  <div class="wrap ftr-in">
+    <div class="ftr-brand">
+      <img src="img/footer-logo.png" width="101" height="44" alt="Studio Sports">
+      <p>Одежда для фигуристов и гимнастов от производителя.</p>
+      <a class="vk" href="http://vk.com/studiosports">ВКонтакте</a>
+    </div>
+    <div><h4>Каталог</h4>
+      <a href="catalog.html?s=figure-skating">Фигурное катание</a>
+      <a href="catalog.html?s=rhythmic-gymnastics">Гимнастика</a>
+      <a href="catalog.html?s=ballroom-dancing">Бальные танцы</a>
+      <a href="catalog.html?s=accessories">Аксессуары</a>
+      <a href="catalog.html?s=rhinestones">Стразы</a></div>
+    <div><h4>Покупателям</h4>
+      <a href="howto.html">Как купить</a>
+      <a href="delivery.html">Доставка и оплата</a>
+      <a href="discounts.html">Система скидок</a>
+      <a href="sizes.html">Таблица размеров</a>
+      <a href="rules.html">Правила продажи</a></div>
+    <div><h4>Контакты</h4>
+      <a class="big" href="tel:+79200624469">+7 920 062-44-69</a><small>частным покупателям</small>
+      <a class="big" href="tel:+79202538907">+7 920 253-89-07</a><small>организациям</small>
+      <a href="mailto:ss@studiosports.ru">ss@studiosports.ru</a>
+      <small>Пн–Пт 09:00–19:00, Сб–Вс выходные</small></div>
+  </div>
+  <div class="wrap ftr-b"><span>© StudioSports · ООО «Стиль-НН»</span>
+    <a href="about.html">О магазине</a><a href="contacts.html">Контакты</a>
+    <a href="requisites.html">Реквизиты</a><a href="privacy.html">Политика обработки ПД</a></div>
+</footer>
+<div class="toast" id="toast" role="status"></div>
+</body>
+</html>
